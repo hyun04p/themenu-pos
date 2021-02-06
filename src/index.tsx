@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import RootRouter from './page';
 import { Provider } from 'react-redux';
-import store from './redux';
+import store from '@redux';
 
 ReactDOM.render(
   <React.StrictMode>

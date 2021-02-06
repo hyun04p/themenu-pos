@@ -3,22 +3,21 @@
   padding: 30px;
 
   .CategoryTile {
-    height: 50px;
-
-    border: 1px solid #aaa;
+    height: 70px;
 
     box-sizing: border-box;
     // padding: 0 30px;
     margin: 15px 0;
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 
     h3 {
       font-size: 1.2rem;
       font-weight: bold;
       width: 120px;
-      margin: 0 50px;
+      margin: 0 0;
     }
   }
 }

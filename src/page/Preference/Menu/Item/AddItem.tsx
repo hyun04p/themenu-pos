@@ -1,10 +1,11 @@
-import Modal from 'react-modal';
 import React, { useState } from 'react';
-import Select from 'react-select';
 import './AddItem.scss';
+
+import Modal from 'react-modal';
+import Select from 'react-select';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../redux';
-import { StoreAction } from '../../../redux/actions';
+import { RootState } from '@redux';
+import { StoreAction } from '@redux/actions';
 
 interface props {
   currentCategory: string;

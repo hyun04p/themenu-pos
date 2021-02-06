@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import './index.scss';
+
 import { useDispatch } from 'react-redux';
-import { StoreAction } from '../../../redux/actions';
-import Categories from './Categories';
-import Items from './Items';
-import OptionGroups from './OptionGroups';
-import './PreferenceMenuPage.scss';
+import { StoreAction } from '@redux/actions';
+import Categories from './Category';
+import Items from './Item';
+import OptionGroups from './OptionGroup';
 
 interface props {}
 

@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../redux';
-import { StoreAction } from '../../redux/actions';
 import './PreferenceStorePage.scss';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@redux';
+import { StoreAction } from '@redux/actions';
 
 interface props {}
 

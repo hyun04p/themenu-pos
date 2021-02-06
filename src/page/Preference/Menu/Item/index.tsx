@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import './index.scss';
+
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../redux';
+import { RootState } from '@redux';
 import Select from 'react-select';
-import './Items.scss';
 import AddItem from './AddItem';
 
 interface props {}

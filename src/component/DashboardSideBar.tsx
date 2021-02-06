@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './DashboardSideBar.scss';
-import { firebaseInstance } from '../firebase';
+
+import { Link } from 'react-router-dom';
+import { firebaseInstance } from '@firebase';
 import { useDispatch } from 'react-redux';
-import { AuthAction } from '../redux/actions';
+import { AuthAction } from '@redux/actions';
 
 interface props {
   onClickNewMenu: any;

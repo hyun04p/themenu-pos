@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { AuthAction } from '../redux/actions';
+import { AuthAction } from '@redux/actions';
 import firebase from 'firebase';
 
 function useAuthStateObserver() {

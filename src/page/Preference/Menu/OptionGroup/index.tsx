@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import './index.scss';
+
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../redux';
+import { RootState } from '@redux';
 import AddOptioGroup from './AddOptionGroup';
-import './OptionGroups.scss';
 
 interface props {}
 interface optionGroupTileProps {

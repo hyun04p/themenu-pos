@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import { OptionGroupEditor } from '../../../component';
+import { OptionGroupEditor } from '../../../../component';
 
 interface props {}
 

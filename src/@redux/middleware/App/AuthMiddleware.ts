@@ -1,6 +1,6 @@
-import { Action } from '../../Types';
-import { AuthAction, StoreAction, UIAction } from '../../actions';
-import { firebaseInstance } from '../../../firebase';
+import { Action } from '@redux/Types';
+import { AuthAction, StoreAction, UIAction } from '@redux/actions';
+import { firebaseInstance } from '@firebase';
 
 export const AuthMiddleware = ({ dispatch }: any) => (next: any) => (
   action: Action

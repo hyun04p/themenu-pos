@@ -1,15 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import DashbaordRouter from './Dashboard';
-import LoginPage from './Auth/LoginPage';
-import { useSelector } from 'react-redux';
-import useAuthStateObserver from '../firebase/useAuthStateObserver';
-import { RootState } from '../redux';
-import { Header, Loading } from '../component';
 import './index.scss';
-import PreferenceRouter from './Preference';
-import HomeRouter from './Home';
-import AuthRouter from './Auth';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import DashbaordRouter from 'page/Dashboard';
+import LoginPage from 'page/Auth/LoginPage';
+import { useSelector } from 'react-redux';
+import useAuthStateObserver from '@firebase/useAuthStateObserver';
+import { RootState } from '@redux';
+import { Header, Loading } from 'component';
+import PreferenceRouter from 'page/Preference';
+import HomeRouter from 'page/Home';
+import AuthRouter from 'page/Auth';
 
 const RootRouter = () => {
   useAuthStateObserver();
@@ -36,7 +37,7 @@ const RootRouter = () => {
             <Route
               exact
               path="/login"
-              component={(props: any) => <LoginPage history={props.history} />}
+              component={(props: any) => <LoginPage />}
             />
           </>
         )}

@@ -1,7 +1,7 @@
-import { Action } from '../../Types';
-import { StoreAction } from '../../actions';
-import { dbService } from '../../../firebase';
-import { RootState } from '../..';
+import { Action } from '@redux/Types';
+import { StoreAction } from '@redux/actions';
+import { dbService } from '@firebase';
+import { RootState } from '@redux';
 import firebase from 'firebase';
 
 interface param {
