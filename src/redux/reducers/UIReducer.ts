@@ -1,5 +1,5 @@
 import { UIAction } from '../actions';
-import { Action, ActionCreator } from '../Types';
+import { Action } from '../Types';
 
 export interface UI {
   isGlobalLoading: boolean;

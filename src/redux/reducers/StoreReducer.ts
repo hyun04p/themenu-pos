@@ -1,5 +1,5 @@
 import { StoreAction } from '../actions';
-import { Action, ActionCreator } from '../Types';
+import { Action } from '../Types';
 
 interface Category {
   name: string;

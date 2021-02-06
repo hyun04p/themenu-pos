@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../redux';
+import { useDispatch } from 'react-redux';
 import { StoreAction } from '../../../redux/actions';
 import Categories from './Categories';
 import Items from './Items';
@@ -10,15 +9,12 @@ import './PreferenceMenuPage.scss';
 interface props {}
 
 const PreferenceMenuPage: React.FC<props> = (props) => {
-  const menu = useSelector((state: RootState) => state.Store.menu);
   const dispatch = useDispatch();
-
   const [page, setPage] = useState('categories');
 
   useEffect(() => {
     dispatch(StoreAction.loadStoreFirebase());
-    // console.log(menu);
-  }, []);
+  }, [dispatch]);
 
   const handleOnClickNavBar = (page: string) => () => {
     setPage(page);

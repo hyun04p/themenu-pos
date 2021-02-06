@@ -1,7 +1,6 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
-import { RootState } from '../../redux';
+
+import { Redirect } from 'react-router-dom';
 
 interface props {}
 

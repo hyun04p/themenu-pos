@@ -4,7 +4,14 @@ interface props {
   onChange: () => any;
 }
 
-const OptionEditor = (props: any) => {};
+const OptionEditor = (props: any) => {
+  return (
+    <div>
+      <h4>{props.option.name}</h4>
+      <p>{props.option.price}</p>
+    </div>
+  );
+};
 
 const OptionGroupEditor: React.FC<props> = (props) => {
   const [optionGroup, setOptionGroup] = useState({
@@ -43,7 +50,9 @@ const OptionGroupEditor: React.FC<props> = (props) => {
         />
       </div>
       <div className="OptionList">
-        {optionGroup.options.map((option) => {})}
+        {optionGroup.options.map((option) => {
+          return <OptionEditor option={option} />;
+        })}
       </div>
     </div>
   );

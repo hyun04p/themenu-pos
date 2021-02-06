@@ -23,9 +23,15 @@ const OptionGroups: React.FC<props> = (props) => {
             {expand ? '접기' : '자세히 보기'}
           </div>
         </div>
-        <div className={expand ? '' : 'hide ' + 'OptionListContainer'}>
+        <div className={(expand ? '' : 'hide ') + 'OptionListContainer'}>
           {props.options.map((option) => {
-            return <OptionTile key={option.name} name={option.name} price={option.price} />;
+            return (
+              <OptionTile
+                key={option.name}
+                name={option.name}
+                price={option.price}
+              />
+            );
           })}
         </div>
       </div>

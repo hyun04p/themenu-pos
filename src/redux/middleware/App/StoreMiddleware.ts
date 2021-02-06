@@ -1,6 +1,6 @@
 import { Action } from '../../Types';
 import { StoreAction } from '../../actions';
-import { firebaseInstance, dbService } from '../../../firebase';
+import { dbService } from '../../../firebase';
 import { RootState } from '../..';
 import firebase from 'firebase';
 
@@ -87,6 +87,6 @@ export const StoreMiddleware = ({ dispatch, getState }: param) => (
             });
         })
       )
-      .catch((e) => console.log("fuck"));
+      .catch((e) => console.log('fuck'));
   }
 };

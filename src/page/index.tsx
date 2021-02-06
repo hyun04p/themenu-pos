@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import DashbaordRouter from './Dashboard';
 import LoginPage from './Auth/LoginPage';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import useAuthStateObserver from '../firebase/useAuthStateObserver';
 import { RootState } from '../redux';
 import { Header, Loading } from '../component';
@@ -10,7 +10,6 @@ import './index.scss';
 import PreferenceRouter from './Preference';
 import HomeRouter from './Home';
 import AuthRouter from './Auth';
-import { StoreAction } from '../redux/actions';
 
 const RootRouter = () => {
   useAuthStateObserver();
