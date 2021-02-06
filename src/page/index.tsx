@@ -26,19 +26,15 @@ const RootRouter = () => {
         {loggedin ? (
           <>
             <Header />
-            <Route path="/" component={() => <HomeRouter />} />
+            <Route exact path="/" component={() => <HomeRouter />} />
             <Route path="/dashboard" component={() => <DashbaordRouter />} />
-            {/* <Route exact path="/setting" component={() => <Settings />} /> */}
             <Route path="/preference" component={() => <PreferenceRouter />} />
+            <Route path="/login" component={() => <LoginPage />} />
           </>
         ) : (
           <>
             <Route path="/" component={(props: any) => <AuthRouter />} />
-            <Route
-              exact
-              path="/login"
-              component={(props: any) => <LoginPage />}
-            />
+            <Route exact path="/login" component={() => <LoginPage />} />
           </>
         )}
       </Router>

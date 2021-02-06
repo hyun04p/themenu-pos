@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
-import { ArrayUtil } from '../../../../util';
+import { ArrayUtil } from '@util';
+
 import './ItemFilter.scss';
 
 interface props {

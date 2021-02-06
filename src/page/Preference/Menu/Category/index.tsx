@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './index.scss';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '@redux';
-import { StoreAction } from '@redux/actions';
+import AddCategoryModal from './AddCategoryModal';
 
 interface props {}
 
@@ -11,42 +11,6 @@ interface CategoryProps {
   name: string;
   description: string;
 }
-
-const CategoryInput = () => {
-  const [newCategoryName, setNewCategoryName] = useState('');
-  const [newCategoryDescription, setNewCategoryDescription] = useState('');
-  const dispatch = useDispatch();
-
-  const handleOnClickAddCategory = () => {
-    dispatch(
-      StoreAction.addCategoryFireBase(newCategoryName, newCategoryDescription)
-    );
-    setNewCategoryName('');
-    setNewCategoryDescription('');
-  };
-
-  return (
-    <div className="CategoryTile">
-      <div>
-        <input
-          placeholder="이름"
-          onChange={(e) => setNewCategoryName(e.target.value)}
-          value={newCategoryName}
-        />
-      </div>
-      <div>
-        <input
-          placeholder="설명 "
-          onChange={(e) => {
-            setNewCategoryDescription(e.target.value);
-          }}
-          value={newCategoryDescription}
-        />
-      </div>
-      <div onClick={handleOnClickAddCategory}>추가</div>
-    </div>
-  );
-};
 
 const Category = (props: CategoryProps) => {
   return (
@@ -64,12 +28,15 @@ const Categories: React.FC<props> = (props) => {
 
   return (
     <div className="CategoryPreference">
+      <div className="header">
+        <h3>카테고리 설정</h3>
+        <AddCategoryModal />
+      </div>
       {categories.map((e) => {
         return (
           <Category name={e.name} description={e.description} key={e.name} />
         );
       })}
-      <CategoryInput />
     </div>
   );
 };

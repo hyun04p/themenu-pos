@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './PreferenceStorePage.scss';
+import './index.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@redux';

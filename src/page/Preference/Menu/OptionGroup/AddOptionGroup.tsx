@@ -5,7 +5,7 @@ import { OptionGroupEditor } from '../../../../component';
 interface props {}
 
 const AddOptioGroup: React.FC<props> = (props) => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
@@ -18,7 +18,7 @@ const AddOptioGroup: React.FC<props> = (props) => {
         className="Modal"
         overlayClassName="Overlay"
       >
-        <div>추가</div>
+        <div>옵션그룹을 추가해보세요</div>
         <div>
           <OptionGroupEditor onChange={() => {}} />
         </div>

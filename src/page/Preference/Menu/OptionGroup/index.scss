@@ -37,7 +37,8 @@
 
       box-sizing: border-box;
       padding: 20px;
-      border: 1px solid #aaa;
+      background-color: #eaeaea;
+      border-radius: 7px;
 
       display: flex;
       flex-direction: column;
@@ -45,7 +46,7 @@
       margin: 10px;
 
       .GroupName {
-        font-size: 2rem;
+        font-size: 1.3rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
