@@ -19,6 +19,7 @@ const AddCategoryModal: React.FC<props> = (props) => {
     );
     setNewCategoryName('');
     setNewCategoryDescription('');
+    setIsModalOpen(false);
   };
 
   return (

@@ -32,11 +32,13 @@ const Categories: React.FC<props> = (props) => {
         <h3>카테고리 설정</h3>
         <AddCategoryModal />
       </div>
-      {categories.map((e) => {
-        return (
-          <Category name={e.name} description={e.description} key={e.name} />
-        );
-      })}
+      <div className="CategoryList">
+        {categories.map((e) => {
+          return (
+            <Category name={e.name} description={e.description} key={e.name} />
+          );
+        })}
+      </div>
     </div>
   );
 };

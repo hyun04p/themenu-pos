@@ -1,15 +1,17 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import HomePage from './HomePage';
 
 interface props {}
 
 const HomeRouter: React.FC<props> = (props) => {
   return (
-    <Redirect
-      to={{
-        pathname: '/dashboard',
-      }}
-    />
+    <HomePage />
+    // <Redirect
+    //   to={{
+    //     pathname: '/dashboard',
+    //   }}
+    // />
   );
 };
 

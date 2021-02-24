@@ -3,7 +3,11 @@
 .Items {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  // flex: 1;
+  height: 100%;
+  overflow: hidden;
+
+  // flex-direction: flex-start;
 
   .Filter {
     width: 100%;
@@ -13,7 +17,7 @@
     justify-content: space-between;
 
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 50px;
 
     border-bottom: 1px #ccc solid;
 
@@ -49,7 +53,8 @@
 
   .List {
     width: 100%;
-    flex: 1;
+    // flex: 1;
+    overflow: scroll;
 
     display: flex;
     flex-direction: column;
