@@ -9,14 +9,14 @@ interface props {}
 
 interface CategoryProps {
   name: string;
-  description: string;
+  // description: string;
 }
 
 const Category = (props: CategoryProps) => {
   return (
-    <div className="CategoryTile">
+    <div className="CategoryTile" key={props.name}>
       <h3>{props.name}</h3>
-      <p>{props.description}</p>
+      {/* <p>{props.description}</p> */}
     </div>
   );
 };
@@ -26,6 +26,8 @@ const Categories: React.FC<props> = (props) => {
     (state: RootState) => state.Store.menu.categories
   );
 
+  console.log(categories);
+
   return (
     <div className="CategoryPreference">
       <div className="header">
@@ -34,9 +36,7 @@ const Categories: React.FC<props> = (props) => {
       </div>
       <div className="CategoryList">
         {categories.map((e) => {
-          return (
-            <Category name={e.name} description={e.description} key={e.name} />
-          );
+          return <Category name={e} />;
         })}
       </div>
     </div>

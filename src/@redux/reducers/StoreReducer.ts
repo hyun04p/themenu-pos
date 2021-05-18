@@ -1,10 +1,10 @@
 import { StoreAction } from '../actions';
 import { Action } from '../Types';
 
-interface Category {
-  name: string;
-  description: string;
-}
+// interface Category {
+//   name: string;
+//   description: string;
+// }
 interface Option {
   name: string;
   price: number;
@@ -29,7 +29,7 @@ export interface Store {
     phone: string;
   };
   menu: {
-    categories: Category[];
+    categories: string[];
     option_groups: OptionGroup[];
     items: Item[];
   };

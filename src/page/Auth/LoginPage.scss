@@ -1,38 +1,75 @@
 @import '../../scss/variables';
 
 .LoginPage {
-  height: 100vh;
   width: 100vw;
-
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 
-  .container {
-    width: 50%;
-    height: 60%;
-    border: 1px $base-color solid;
-    border-radius: 15px;
+  img {
+    height: 100%;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.4),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
+  .right {
+    flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
 
-    p {
-      font-size: 2.2rem;
-      font-weight: 500;
-      color: $base-color;
-    }
-    button {
-      background-color: $base-color;
-      border: none;
-      color: #fff;
-      width: 130px;
-      height: 37px;
-      border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+
+    .formContainer {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        span {
+          font-weight: bold;
+        }
+        font-size: 33px;
+        padding-bottom: 10px;
+      }
+      .form {
+        height: 400px;
+        width: 405px;
+        // background-color: #a49a9130;
+        border-radius: 10px;
+        border: 1px solid #a49a9130;
+        // box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1),
+        //   0 6px 20px 0 rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        input {
+          width: 250px;
+          margin-bottom: 20px;
+          font-size: 15px;
+          box-sizing: border-box;
+          padding: 10px;
+          border: 0px;
+          border-bottom: 1px #ccc solid;
+        }
+
+        input.middle:focus {
+          outline-width: 0;
+        }
+
+        button {
+          background-color: #a49a91;
+          border: none;
+          color: #fff;
+          width: 250px;
+          height: 45px;
+          border-radius: 30px;
+          font-size: 20px;
+        }
+      }
     }
   }
 }

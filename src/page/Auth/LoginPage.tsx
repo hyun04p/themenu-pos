@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AuthAction } from '@redux/actions';
 import { RootState } from '@redux';
 import { Redirect } from 'react-router-dom';
+import LandingImg from 'asset/Landing.jpg';
 
 interface props {}
 
@@ -30,11 +31,25 @@ const Auth: React.FC<props> = (props) => {
 
   return (
     <div className="LoginPage">
-      <div className="container">
-        <p className="title">LOGIN</p>
-        <input onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" onChange={(e) => setPassword(e.target.value)} />
-        <button onClick={handleOnClickLogin}>로그인</button>
+      <img src={LandingImg} />
+      <div className="right">
+        <div className="formContainer">
+          <h2>
+            <span>더MENU</span> 사장님 로그인
+          </h2>
+          <div className="form">
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="이메일"
+            />
+            <input
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="비밀번호"
+            />
+            <button onClick={handleOnClickLogin}>로그인</button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -82,7 +82,7 @@ const AddItem: React.FC<props> = (props) => {
           <Select
             isMulti={true}
             options={menu.categories.map((cat) => {
-              return { value: cat.name, label: cat.name };
+              return { value: cat, label: cat };
             })}
             placeholder="카테고리를 모두 선택해주세요"
             defaultValue={

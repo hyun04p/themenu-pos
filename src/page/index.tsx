@@ -11,6 +11,7 @@ import { Header, Loading } from 'component';
 import PreferenceRouter from 'page/Preference';
 import HomeRouter from 'page/Home';
 import AuthRouter from 'page/Auth';
+import WelcomeRouter from './WelcomePage';
 
 const RootRouter = () => {
   useAuthStateObserver();
@@ -26,7 +27,7 @@ const RootRouter = () => {
         {loggedin ? (
           <>
             <Header />
-            <Route exact path="/" component={() => <HomeRouter />} />
+            <Route path="/" component={() => <HomeRouter />} />
             <Route path="/dashboard" component={() => <DashbaordRouter />} />
             <Route path="/preference" component={() => <PreferenceRouter />} />
             <Route path="/login" component={() => <LoginPage />} />
@@ -34,6 +35,11 @@ const RootRouter = () => {
         ) : (
           <>
             <Route path="/" component={(props: any) => <AuthRouter />} />
+            <Route
+              exact
+              path="/"
+              component={(props: any) => <WelcomeRouter />}
+            />
             <Route exact path="/login" component={() => <LoginPage />} />
           </>
         )}

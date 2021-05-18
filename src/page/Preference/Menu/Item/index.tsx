@@ -46,7 +46,7 @@ const Items: React.FC<props> = (props) => {
 
   const getOptions = () => {
     const categories = menu.categories.map((e) => {
-      return { value: e.name, label: e.name };
+      return { value: e, label: e };
     });
     return [
       {

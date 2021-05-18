@@ -6,12 +6,12 @@ interface props {}
 
 const HomeRouter: React.FC<props> = (props) => {
   return (
-    <HomePage />
-    // <Redirect
-    //   to={{
-    //     pathname: '/dashboard',
-    //   }}
-    // />
+    // <HomePage />
+    <Redirect
+      to={{
+        pathname: '/dashboard',
+      }}
+    />
   );
 };
 

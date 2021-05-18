@@ -72,11 +72,9 @@ export const StoreMiddleware = ({ dispatch, getState }: param) => (
           console.log('[StoreMiddleware] found a store');
           store.ref
             .update({
-              'menu.categories': firebase.firestore.FieldValue.arrayUnion({
-                id: getState().Store.menu.categories.length,
-                description: action.payload.description,
-                name: action.payload.name,
-              }),
+              'menu.categories': firebase.firestore.FieldValue.arrayUnion(
+                action.payload.name
+              ),
             })
             .then(() => {
               console.log('ASDFIJASDLFSA');

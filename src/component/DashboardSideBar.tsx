@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './DashboardSideBar.scss';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { firebaseInstance } from '@firebase';
 import { useDispatch } from 'react-redux';
 import { AuthAction } from '@redux/actions';
@@ -14,6 +14,7 @@ interface props {
 const DashboardSideBar: React.FC<props> = (props) => {
   const [selected, setSelected] = useState(0);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleOnClickNewMenu = () => {
     setSelected(0);
